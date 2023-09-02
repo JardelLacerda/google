@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 
 interface IProps {
     variant?: "text";
-    onClick?: () => void;
 }
 
 export const BasicButton = styled.button<IProps>`

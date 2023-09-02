@@ -1,14 +1,15 @@
 import { BasicButton } from "./styled"
 
 interface IButtonProps{
-    children: string | JSX.Element,
+    children: string | JSX.Element | string[],
     variant?: "text" 
+    action?: () => void;
 }
 
-const Button = ({children, variant}: IButtonProps) => {
+const Button = ({children, variant, action}: IButtonProps) => {
     return (
         <>
-            <BasicButton variant={variant}>{children}</BasicButton>
+            <BasicButton onClick={action} variant={variant}>{children}</BasicButton>
         </>
     )
 }
